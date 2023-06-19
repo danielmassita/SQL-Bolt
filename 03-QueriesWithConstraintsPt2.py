@@ -57,3 +57,7 @@ SELECT *
 FROM Movies
 WHERE Title
     LIKE '%wall%';
+
+SELECT * FROM Movies
+WHERE Title
+    LIKE '%wall%';
