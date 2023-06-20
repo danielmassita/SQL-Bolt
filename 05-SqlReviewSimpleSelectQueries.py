@@ -54,6 +54,14 @@ ORDER BY Latitude DESC;
 SELECT City, Longitude FROM north_american_cities
 WHERE Longitude < '-87.629798'
 ORDER BY Longitude DESC;
+# OR THE NEXT QUERY IS MORE EXACT
+SELECT * FROM north_american_cities
+WHERE Longitude < (
+    SELECT Longitude 
+    FROM north_american_cities
+    WHERE City = 'Chicago'
+    )
+ORDER BY Longitude ASC;
 
 SELECT * FROM north_american_cities
 WHERE Country LIKE '%Mexico%'
