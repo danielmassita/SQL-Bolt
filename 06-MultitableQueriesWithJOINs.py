@@ -91,3 +91,17 @@ Id	Title	Director	Year	Length_minutes
 13	Brave	Brenda Chapman	2012	102
 14	Monsters University	Dan Scanlon	2013	110
 """
+
+SELECT Title, Domestic_sales, International_sales FROM Movies
+INNER JOIN Boxoffice
+    ON Movies.Id = Boxoffice.Movie_id;
+
+SELECT Title, Domestic_sales, International_sales FROM Movies
+INNER JOIN Boxoffice
+    ON Movies.Id = Boxoffice.Movie_id
+WHERE International_sales > Domestic_sales;
+
+SELECT Title, Rating FROM Movies
+INNER JOIN Boxoffice
+    ON Movies.Id = Boxoffice.Movie_id
+ORDER BY Rating DESC;
