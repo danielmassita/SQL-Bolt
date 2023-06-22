@@ -59,3 +59,11 @@ Manager	Shirlee M.	1e	3
 Manager	Daria O.	2w	6
 RESET
 """
+SELECT Name, MAX(Years_employed) FROM employees;
+SELECT Name, MAX(Years_employed) AS Oldest_staff FROM employees;
+
+SELECT DISTINCT Role, AVG(Years_employed) AS Average_years_employed FROM Employees
+GROUP BY Role;
+
+SELECT Building, SUM(Years_employed) AS Total_years_per_building FROM Employees
+GROUP BY Building;
