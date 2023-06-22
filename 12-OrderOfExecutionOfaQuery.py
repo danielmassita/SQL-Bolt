@@ -87,4 +87,11 @@ SELECT DISTINCT Director, COUNT(Title) AS Number_movies FROM Movies
 GROUP BY Director
 ORDER BY COUNT(Title) DESC;
 
+
+SELECT DISTINCT Director, SUM(International_sales + Domestic_Sales) AS Global_sales_per_director 
+FROM Movies AS m
+INNER JOIN Boxoffice AS b
+    ON m.Id = b.Movie_id
+GROUP BY Director
+ORDER BY Global_sales_per_director DESC;
 """
