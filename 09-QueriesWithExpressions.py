@@ -66,3 +66,18 @@ Movie_id	Rating	Domestic_sales	International_sales
 2	7.2	162798565	200600000
 13	7.2	237283207	301700000
 """
+SELECT Title, (International_sales + Domestic_sales)/1000000 AS Total_sales 
+FROM Movies AS m
+INNER JOIN Boxoffice AS b
+    ON m.Id = b.Movie_id;
+  
+SELECT m.Title, (b.Rating*10) AS Percentage_score
+FROM Movies AS m
+INNER JOIN Boxoffice AS b
+    ON m.Id = b.Movie_id;
+  
+SELECT m.Title, m.Year
+FROM Movies AS m
+INNER JOIN Boxoffice AS b
+    ON m.Id = b.Movie_id
+WHERE (Year % 2 = 0);
