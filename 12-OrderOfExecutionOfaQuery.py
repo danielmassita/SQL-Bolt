@@ -83,6 +83,8 @@ Exercise 12 — Tasks
 Find the number of movies each director has directed
 Find the total domestic and international sales that can be attributed to each director
 """
-
+SELECT DISTINCT Director, COUNT(Title) AS Number_movies FROM Movies
+GROUP BY Director
+ORDER BY COUNT(Title) DESC;
 
 """
