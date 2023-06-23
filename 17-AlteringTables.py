@@ -54,3 +54,11 @@ Id	Title	Director	Year	Length_minutes
 13	Brave	Brenda Chapman	2012	102
 14	Monsters University	Dan Scanlon	2013	110
 """
+SELECT * FROM movies;
+
+ALTER TABLE Movies
+ADD COLUMN Aspect_ratio FLOAT;
+
+ALTER TABLE Movies
+ADD COLUMN Language TEXT 
+    Default 'English';
