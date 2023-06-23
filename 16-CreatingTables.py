@@ -65,3 +65,15 @@ Create a new table named Database with the following columns:
 – Download_count An integer count of the number of times this database was downloaded
 This table has no constraints.
 """
+CREATE TABLE Database (
+    Name TEXT,
+    Version FLOAT,
+    Download_count INTEGER
+);
+"""
+Table: Database
+Name	Version	Download_count
+SQLite	3.9	92000000
+MySQL	5.5	512000000
+Postgres	9.4	384000000
+"""
