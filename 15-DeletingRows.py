@@ -37,5 +37,13 @@ Exercise 15 — Tasks
 This database is getting too big, lets remove all movies that were released before 2005.
 Andrew Stanton has also left the studio, so please remove all movies directed by him.
 """
+SELECT * FROM movies;
 
-"""
+SELECT * FROM Movies
+WHERE Year < 2005;
+
+SELECT * FROM Movies
+WHERE Director = 'Andrew Stanton';
+
+DELETE FROM Movies
+WHERE Director = 'Andrew Stanton';
